@@ -1,0 +1,28 @@
+{
+  "name": "ember-app-kit",
+  "dependencies": {
+    "handlebars": "~1.1.2",
+    "jquery": "~1.9.1",
+    "qunit": "~1.12.0",
+    "ember": "~1.5.0",
+    "ember-data": "~1.0",
+    "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
+    "ic-ajax": "~0.1",
+    "emblem.js": "*",
+    "momentjs": "~2.4.0",
+    "bootstrap": "~3.0.3",
+    "ember-localstorage-adapter": "https://github.com/WMeldon/ember-localstorage-adapter.git",
+    "js-md5": "~1.1.0",
+    "swiper": "~2.4.3",
+    "modernizr": "~2.7.1",
+    "fastclick": "~1.0.0",
+    "ember-indexeddb-adapter": "https://github.com/kurko/ember-indexeddb-adapter.git",
+    "indexeddbshim": "https://github.com/axemclion/IndexedDBShim.git",
+    "bootstrap-select": "https://github.com/silviomoreto/bootstrap-select.git",
+    "ember-simple-auth": "~0.2.0",
+    "google-auth": "https://apis.google.com/js/auth.js"
+  },
+  "resolutions": {
+    "ember": "~1.5.0"
+  }
+}

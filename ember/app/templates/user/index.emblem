@@ -1,0 +1,15 @@
+br
+.row
+  .col-sm-4
+    .user-profile
+      img.img-thumbnail.img-responsive{bindAttr src="avatarUrl"} alt="User's Avatar"
+  .col-sm-8
+    h2
+      ' #{name}
+      a.btn.btn-xs.btn-success{action 'loginAs'} Log In As
+    span = email
+    p = bio
+    span Created #{format-date creationDate}
+    div
+      button.btn.btn-primary{action 'edit'} Edit
+      button.btn.btn-danger.pull-right{action 'delete'} Delete

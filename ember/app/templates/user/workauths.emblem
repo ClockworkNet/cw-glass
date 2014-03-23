@@ -1,0 +1,14 @@
+.span4
+  h1 Workauths for #{user.name}
+  table.table.table-striped
+    tbody
+    each content
+      tr
+        td
+          this.name
+    else
+      tr
+        td
+          p Please make sure you've added your Guts Token and ldap username to your account
+.span7
+    outlet

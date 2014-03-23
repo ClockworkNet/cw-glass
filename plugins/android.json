@@ -1,0 +1,35 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "res/xml/config.xml": {
+            "/widget": {
+                "<preference name=\"fullscreen\" value=\"true\" />": 1,
+                "<feature name=\"GlassCore\"><param name=\"android-package\" value=\"com.rossgerbasi.cordova.glass.GlassCorePlugin\" /><param name=\"onload\" value=\"true\" /></feature>": 1
+            },
+            "/*": {
+                "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>": 1
+            }
+        },
+        "AndroidManifest.xml": {
+            "/manifest/application": {
+                "<activity android:finishOnTaskLaunch=\"true\" android:launchMode=\"singleInstance\" android:name=\"com.rossgerbasi.cordova.glass.GoogleGlassActivity\" android:noHistory=\"true\" android:theme=\"@style/GlassTheme\"><intent-filter><action android:name=\"com.google.android.glass.action.VOICE_TRIGGER\" /></intent-filter><meta-data android:name=\"com.google.android.glass.VoiceTrigger\" android:resource=\"@xml/app_launch_voice_trigger\" /></activity>": 1
+            },
+            "/manifest": {
+                "<uses-permission android:name=\"android.permission.INTERNET\" />": 1,
+                "<uses-library android:name=\"com.google.android.glass\" android:required=\"true\" />": 1
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.rossgerbasi.cordova.glass.core": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        }
+    },
+    "dependent_plugins": {}
+}

@@ -1,0 +1,5 @@
+`import UsersController from 'clockwork/controllers/users'`
+
+UsersIndexController = UsersController.extend()
+
+`export default UsersIndexController`

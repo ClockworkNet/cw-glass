@@ -1,0 +1,19 @@
+.col-sm-4
+  h4 Users: #{usersCount}
+  ul.users-listing.list-unstyled
+    each user in controller
+      link-to 'user' user
+        .row.user
+          .col-xs-4 
+            img.pull-left.img-responsive{bind-attr src="user.avatarUrl"}
+          .col-xs-4
+            user.name
+          .col-xs-4
+            a.btn.btn-xs.btn-success{action 'loginAs' user} Log In As
+            a.btn.btn-xs.btn-danger{action 'deleteUser' user} Delete User
+
+    else
+      li no users… :-(
+  link-to 'users.create' .btn.btn-success | Add User
+.col-sm-8
+  outlet

@@ -1,0 +1,13 @@
+.modal.fade#dialog: .modal-dialog: .modal-content 
+  .modal-header
+    button{action 'cancel'} type="button" class="close" aria-hidden="true" &times;
+    h4.modal-title
+     = title
+  .modal-body
+    p
+      content
+  .modal-footer
+    button{action 'confirm'} autofocus="autofocus" type="button" class="btn btn-danger"
+      = confirmTitle
+    button{action 'cancel'} type="button" class="btn btn-default"
+      = cancelTitle

@@ -1,0 +1,29 @@
+/ if isNative
+/   .status-bar
+unless controller.isNative
+  .navbar.navbar-default.navbar-top
+    .container
+      .navbar-header
+        button.navbar-toggle.left type="button" data-toggle="collapse" data-target=".drawer-left"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        link-to .navbar-brand 'index'
+          | Google Glass
+
+      .hidden-xs
+        ul.nav.navbar-nav
+          = partial 'partials/nav-items'
+        ul.navbar-right.nav.navbar-nav
+          if session.isAuthenticated
+            li
+              a{ action 'invalidateSession' } href="#" Sign out
+          else
+            li
+              a{ action 'authenticateSession' } href="#" Sign in
+        / if user
+        /   .navbar-right.navbar-form
+        /     a.btn.btn-default.dropdown-toggle
+        /       span.glyphicon.glyphicon-user.glyphicon
+        /       |&nbsp;#{user.name}
+            / img.img-responsive.img-thumbnail{bind-attr src="user.avatarUrl"} alt="User's Avatar"

@@ -1,0 +1,9 @@
+= partial 'partials/drawer-left'
+.viewport
+  = partial 'partials/navbar'
+  .container.content
+    .row
+      outlet 'main'
+= partial 'partials/drawer-right'
+
+modal-dialog cancel='dialogCancel' confirm='dialogConfirm' active=dialogActive content=dialog.content title=dialog.title cancelTitle=dialog.cancelTitle confirmTitle=dialog.confirmTitle

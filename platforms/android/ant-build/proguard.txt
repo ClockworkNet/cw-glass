@@ -1,0 +1,6 @@
+# view AndroidManifest.xml #generated:12
+-keep class com.rossgerbasi.cordova.glass.GoogleGlassActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:6
+-keep class io.cordova.hellocordova.HelloCordova { <init>(...); }
+

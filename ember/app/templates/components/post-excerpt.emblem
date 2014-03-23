@@ -1,0 +1,8 @@
+.media
+    .pull-left
+      link-to 'post' model
+        img.media-object.img-thumbnail{bind-attr src="thumbnail"} width='64'
+    .media-body
+      link-to 'post' model
+        h3.media-heading = title
+        == excerpt

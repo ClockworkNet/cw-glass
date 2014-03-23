@@ -1,0 +1,9 @@
+.drawer-left.drawer.width.collapse
+  ul.nav.nav-pills.nav-stacked
+    = partial 'partials/nav-items'
+    if session.isAuthenticated
+      li
+        a{ action 'invalidateSession' } href="#" Sign out
+    else
+      li
+        a{ action 'authenticateSession' } href="#" Sign in

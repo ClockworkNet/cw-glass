@@ -1,0 +1,52 @@
+.row
+  div.col-sm-6
+    form.user-edit.form
+
+      .form-group
+        label.control-label User name
+        = input .form-control value=name name='name'
+
+      .form-group
+        label.control-label User email
+        = input .form-control value=email name='email' type='email'
+        
+      .form-group
+        label.control-label User short bio
+        = textarea .form-control value=bio
+      hr
+      each account in accounts
+        / h5
+        /   account.title
+        .row
+          each credential in account.credentials
+            .col-sm-6
+              .form-group
+                label.control-label #{credential.title}
+                if credential.protected
+                  = input .form-control value=credential.value type='password'
+                else
+                  = input .form-control value=credential.value autocomplete='off' autocorrect='off' autocapitalize='off' spellcheck='false'
+
+          .col-sm-12
+            a.btn.btn-xs.btn-danger.pull-right{action 'deleteAccount' account}
+              | Delete
+        hr
+
+      .form-group
+        label.control-label Accounts
+        .row
+          .col-xs-8
+            Ember.Select .form-control contentBinding='filteredTypes' prompt='-' optionLabelPath='content.title' selectionBinding='controller.selectedType'
+          .col-xs-4
+            button.btn.btn-block.btn-primary{action 'addAccount'} type='button' Add 
+
+      .form-group
+        .row
+          .col-xs-12
+            button.btn.pull-right.btn-success{action 'save'} Save
+
+  div.col-sm-6
+    img.img-responsive.img-thumbnail{bind-attr src="avatarUrl"} alt="User's Avatar"
+    .form-group
+      label.control-label Gravatar
+      = input .form-control value=avatarUrl disabled=true

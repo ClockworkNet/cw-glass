@@ -1,0 +1,10 @@
+.col-sm-4
+  h4 Devices
+
+.col-sm-8
+  ul.users-listing.list-unstyled
+    each device in controller
+      div.col-lg-3.col-md-4 
+        a.btn-block.btn.btn-default #{device.name}
+    else
+      div.col-sm-3 no devices :-(

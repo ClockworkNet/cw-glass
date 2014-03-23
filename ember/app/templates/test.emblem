@@ -1,0 +1,18 @@
+if controllers.application.native
+  .col-xs-12
+    button.btn.btn-primary{action 'capture'} Take a Picture
+
+    hr
+
+    .form-inline
+      .form-group
+        button.btn.btn-primary{action 'direction'}
+          | Track Coordinates
+      .form-group
+        div.circle style=directionInput
+          span.north N
+        / input.form-control. value=directionInput
+
+    hr
+else
+  h3.text-center This screen is for testing native functions only

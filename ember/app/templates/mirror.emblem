@@ -1,0 +1,8 @@
+.col-xs-12
+  h1 Mirror API
+  
+  .form-group
+    = input .form-control value=message name='message'
+  .form-group
+    = textarea .form-control value=html name='html'
+  a.btn.btn-primary{action 'timelineInsert'} Send to Glass

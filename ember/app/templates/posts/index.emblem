@@ -1,0 +1,6 @@
+/ .col-sm-4.master
+/     ul.media-list
+/       each post in content
+/         post-excerpt title=post.title excerpt=post.excerpt thumbnail=post.thumbnail model=post
+/         hr
+| Select a story

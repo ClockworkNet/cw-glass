@@ -1,0 +1,4 @@
+.col-xs-12
+  h2#title Welcome to Ember.js
+  each
+    pretty-color name=this
